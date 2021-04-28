@@ -29,7 +29,6 @@ span {
 input {
   width: 5%;
   border: none;
-  background-color: gray;
   font-size: 20px;
 }
 </style>
