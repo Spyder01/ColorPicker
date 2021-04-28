@@ -1,7 +1,7 @@
 <template>
   <div>
-  <span class="values">{{Cvalue}}</span>
-  <input type='range' min='0' max='255' v-model='Cvalue' />
+  <span class="values">{{Value}}</span>
+  <input type='range' min='0' max='255' v-model='Value'/>
   <span class="demo" :style = "{ background: colorizer(color)}"></span>
   </div>
 </template>
@@ -12,20 +12,22 @@ export default {
   name: 'colorSlider',
   data () {
     return {
-      Cvalue: 0
+      Value: 125
     }
   },
   props: {
-    color: String
+    color: String,
+    Cvalue: Number
   },
   methods: {
     colorizer (color) {
+      this.$emit('Send-Color', this.Value)
       if (color === 'red') {
-        return 'rgb(' + this.Cvalue + ',0,0)'
+        return 'rgb(' + this.Value + ',0,0)'
       } else if (color === 'green') {
-        return 'rgb(0,+' + this.Cvalue + ',0)'
+        return 'rgb(0,+' + this.Value + ',0)'
       } else {
-        return 'rgb(0,0,' + this.Cvalue + ')'
+        return 'rgb(0,0,' + this.Value + ')'
       }
     }
   }
@@ -39,6 +41,7 @@ div {
 }
 
 .values {
+  display: inline-block;
   font-size: 300%;
 }
 
@@ -56,5 +59,7 @@ input {
   left: 50px;
   display: inline-block;
   top: 5px;
+  box-shadow:0 0 0.2rem rgba(0, 0, 0, 0.4);
+  transition: 0.7s ease-in-out;
 }
 </style>

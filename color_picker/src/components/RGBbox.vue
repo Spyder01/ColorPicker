@@ -1,20 +1,25 @@
 <template>
-  <span styl="{color: color}">(
-    <input v-model="R"/>, <input v-model="G"/>, <input v-model="B"/> )</span>
+  <span :style="{color: color}">rgb( {{R}}, {{G}}, {{B}} )</span>
 </template>
 
 <script>
 
 export default {
   name: 'RGBbox',
-  data () {
-    return {
-      R: 0,
-      G: 0,
-      B: 0
-    }
-  },
   props: {
+
+    R: {
+      type: Number,
+      default: 125
+    },
+    G: {
+      type: Number,
+      default: 125
+    },
+    B: {
+      type: Number,
+      default: 125
+    },
     color: String
   }
 }
@@ -29,6 +34,7 @@ span {
 input {
   width: 5%;
   border: none;
-  font-size: 20px;
+  font-size: 10px;
+
 }
 </style>

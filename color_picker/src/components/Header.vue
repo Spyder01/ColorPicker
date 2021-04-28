@@ -1,5 +1,5 @@
 <template>
-  <h1 :style='{color: color}'>{{text}}</h1>
+  <h1>{{text}}</h1>
 </template>
 
 <script>
@@ -23,6 +23,9 @@ h1{
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  background: -webkit-linear-gradient(#7FD9D9, #FFC227);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 768px){
