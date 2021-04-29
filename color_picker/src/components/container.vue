@@ -69,7 +69,7 @@ export default {
     OnClick3 () {
       this.decider2 = !this.decider2
       if (this.decider2 === false) {
-        document.body.style.backgroundColor = this.MBgColor
+        document.body.style.backgroundColor = 'rgb(125,125,125)'
         this.color = 'black'
       } else {
         document.body.style.backgroundColor = 'rgb(125,125,125)'
@@ -87,7 +87,7 @@ export default {
    min-height: 45%;
    padding: 0.1% 1% 0.1% 1%;
    margin: 10% auto;
-   margin-top: 5%;
+   margin-top: 4%;
    border-radius: 10%;
    box-shadow:0 0 0.7rem rgba(0, 0, 0, 0.4);
    position: relative;
@@ -150,7 +150,8 @@ export default {
    min-height: 50%;
    padding: 0.1% 1% 0.1% 1%;
    margin: 10% auto;
-   margin-top: 15%;
+   margin-top: 7%;
+   right: 8px;
    border-radius: 10%;
    box-shadow:0 0 0.7rem rgba(0, 0, 0, 0.4);
    transform: scale(1,0.89);
