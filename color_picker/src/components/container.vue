@@ -69,7 +69,7 @@ export default {
     OnClick3 () {
       this.decider2 = !this.decider2
       if (this.decider2 === false) {
-        document.body.style.backgroundColor = this.MBgColor
+        document.body.style.backgroundColor = 'rgb(125,125,125)'
         this.color = 'black'
       } else {
         document.body.style.backgroundColor = 'rgb(125,125,125)'
