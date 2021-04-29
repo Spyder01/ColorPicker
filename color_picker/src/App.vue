@@ -1,5 +1,5 @@
 <template>
-<Container color='white' />
+<Container />
 </template>
 
 <script>
@@ -21,6 +21,6 @@ body{
   width: 100%;
   height: 100%;
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(132,212,221);
+  background-color: rgb( 125, 125, 125 );
 }
 </style>

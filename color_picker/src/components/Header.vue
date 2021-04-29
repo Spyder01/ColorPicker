@@ -19,11 +19,11 @@ export default {
 <style scoped>
 
 h1{
-  font-size:200%;
+  font-size:250%;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
-  background: -webkit-linear-gradient(#7FD9D9, #FFC227);
+  background: -webkit-linear-gradient(#7FD9D9,rgb( 101, 174, 64 ));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
