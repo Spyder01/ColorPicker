@@ -22,5 +22,6 @@ body{
   height: 100%;
   font-family: 'Raleway', sans-serif;
   background-color: rgb( 125, 125, 125 );
+  position: fixed;
 }
 </style>
