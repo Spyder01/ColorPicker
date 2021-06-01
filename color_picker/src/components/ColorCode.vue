@@ -30,24 +30,49 @@ export default {
   },
   methods: {
     componentToHex (c) {
-      var hex = c.toString(16)
-      return hex.length === 1 ? '0' + hex : hex
+      var k = []
+      const obj = {
+        1: '1',
+        2: '2',
+        3: '3',
+        4: '4',
+        5: '5',
+        6: '6',
+        7: '7',
+        8: '8',
+        9: '9',
+        10: 'A',
+        11: 'B',
+        12: 'C',
+        13: 'D',
+        14: 'E',
+        15: 'F'
+      }
+      while (c !== 0) {
+        var temp = c % 16
+        k.push(obj.temp)
+        temp++
+        c = c / 16
+        c = temp * 0 + c
+      }
+      console.log(k)
+
+      return k
     },
     rgbToHex (r, g, b) {
-      return '#' + this.dec2base((((1 << 24) + (r << 16) + (g << 8) + b)), 16).slice(1)
-    },
-    dec2base (int, base) {
-      const letters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K']
-      let rest
-      let returnVal = ''
-      if (base > 1 && base < 37) {
-        while (int !== 0) {
-          rest = int % base
-          int = Math.floor(int / base)
-          returnVal = letters[rest] + returnVal
-        }
+      r = Number(r).toString(16)
+      g = Number(g).toString(16)
+      b = Number(b).toString(16)
+
+      if (r.length === 1) {
+        r = '0' + r
+      } if (g.length === 1) {
+        g = '0' + g
+      } if (b.length === 1) {
+        b = '0' + b
       }
-      return returnVal
+
+      return '#' + r + g + b
     }
   }
 }
